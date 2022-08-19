@@ -10,4 +10,8 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
-        config-file: cypress.config.ts
+        with:
+              # just for full picture after installing Cypress
+              # print information about detected browsers, etc
+              # see https://on.cypress.io/command-line#cypress-info
+              build: npx cypress open --config-file=cypress.config.js
